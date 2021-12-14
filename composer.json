@@ -6,12 +6,12 @@
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
-            "Hiecor\\": ""
+            "Hiecor\\PaymentMethod\\": ""
         }
     },
     "authors": [
     {
-      "name": "Hiecor",
+      "name": "Hiecor Payment Gateway",
       "email": "hiecor@gmail.com",
       "homepage": "https://hiecor.com/",
       "role": "Leader"

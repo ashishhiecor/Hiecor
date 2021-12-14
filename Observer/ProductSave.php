@@ -123,7 +123,7 @@ class ProductSave implements ObserverInterface
 					
 					}else{
 			            $endPoint='rest/v1/product/create-product/';
-			        	//$response = $this->helper->postApiCall($product_details,$endPoint);
+			        	$response = $this->helper->postApiCall($product_details,$endPoint);
 			        	$hiecorPId = $response['data'][0]['product_id'];
 			        	$this->logger->critical('ProductSave response postApiCall '.$magentoPId, ['responseData' => $response]);
 					}

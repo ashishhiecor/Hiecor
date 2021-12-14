@@ -3,4 +3,4 @@
 \Magento\Framework\Component\ComponentRegistrar::MODULE, 
 'Hiecor_PaymentMethod',
 __DIR__
-); 
+);

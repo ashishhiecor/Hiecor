@@ -165,6 +165,7 @@ class SalesOrder implements ObserverInterface
                     'payment_type' => 'credit',
                     'payment_method' => '',
                     'ship_required' => '',
+                    'crm_partner_order_id' => isset($order_id) ? $order_id : '',
                     'order_source' => $configData['hiecorSource'],
                 );
                    
