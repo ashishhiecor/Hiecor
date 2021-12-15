@@ -48,7 +48,7 @@ class SalesOrder implements ObserverInterface
             //fetch whole payment information
 			$payment = $order->getPayment()->getData();
 
-            if($isMethodActive && isset($payment['method']) && $payment['method'] == 'hiecor_paymentmethod') {
+            if(!empty($order_id) && $isMethodActive && isset($payment['method']) && $payment['method'] == 'hiecor_paymentmethod') {
     			$grandTotal = $order->getGrandTotal();
        			$subTotal   = $order->getSubtotal();
 
