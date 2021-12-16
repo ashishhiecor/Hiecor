@@ -40,10 +40,10 @@ class SalesOrder implements ObserverInterface
             $order = $observer->getEvent()->getOrder();
 			$order_id = $order->getIncrementId();
 
-
+	     //Get & Unset Session
              $ccSession = $objectManager->create('Magento\Customer\Model\Session');
              $ccData    = $ccSession->getCcData();
-             
+             $ccSession->unsCcData();
 			
             //fetch whole payment information
 			$payment = $order->getPayment()->getData();
