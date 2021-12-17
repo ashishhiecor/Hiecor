@@ -166,7 +166,7 @@ class SalesOrder implements ObserverInterface
                     'payment_method' => '',
                     'ship_required' => '',
                     'crm_partner_order_id' => isset($order_id) ? $order_id : '',
-                    'order_source' => $configData['hiecorSource'],
+                    'order_source' => isset($configData['hiecorSource']) ? $configData['hiecorSource'] : 'Magento'
                 );
                    
     			$endPoint = 'rest/v1/order/';
