@@ -27,7 +27,7 @@ class InstallData implements InstallDataInterface
             'hiecor_product_id',
             [
                 'type' => 'varchar',
-                'label' => 'Hiecor Product ID',
+                'label' => 'HieCor Product ID',
                 'input' => 'text',
                 'required' => false,
                 'sort_order' => 40,
