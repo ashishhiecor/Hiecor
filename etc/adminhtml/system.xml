@@ -14,7 +14,7 @@
                     <label>Description</label>
                 </field>
                 <field id="hiecor_url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Hiecor Url</label>
+                    <label>HieCOR URL</label>
                 </field>
                 <field id="authorization_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Authorization Key</label>
@@ -23,7 +23,7 @@
                     <label>User Name</label>
                 </field>
                 <field id="agent_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Agent Id</label>
+                    <label>Agent ID</label>
                 </field>
                 <field id="hiecor_source" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Source</label>
