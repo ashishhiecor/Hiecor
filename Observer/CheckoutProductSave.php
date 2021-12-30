@@ -52,7 +52,8 @@ class CheckoutProductSave implements ObserverInterface
                 $attrCodeValue = $productRepo->getData('hiecor_product_id');
                 $StockState    = $objectManager->get('\Magento\InventorySalesAdminUi\Model\GetSalableQuantityDataBySku');
                 $qty           = $StockState->execute($product->getSku());
-                $stocks        = !empty($qty[0]['qty']) ? $qty[0]['qty'] : '0';
+                $unlimited_stock = ($qty[0]['manage_stock'] == 1) ? 0 : 1;
+                $stocks      =    (($qty[0]['manage_stock'] == 1) && !empty($qty[0]['qty'])) ? $qty[0]['qty'] : 0;
                 $sku           = $product->getSku();
 
                 $categories =   $productRepo->getCategoryIds(); /*will return category ids array*/
