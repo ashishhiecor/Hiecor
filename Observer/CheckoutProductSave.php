@@ -76,7 +76,7 @@ class CheckoutProductSave implements ObserverInterface
                    "width"=>"0",
                    "height"=>"0",
                    "price_special"=>"0",
-                   "unlimited_stock"=>'0',
+                   "unlimited_stock"=>$unlimited_stock,
                    "taxable"=>"Yes",
                    "raw_product_cost"=>"",
                    "upc"=>"",
