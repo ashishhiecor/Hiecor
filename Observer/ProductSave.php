@@ -49,8 +49,9 @@ class ProductSave implements ObserverInterface
 	        $price    = 	$product->getPrice();
 	        $stocks   =     $product->getStockData();
 	        $images   = 	$this->helper->getProductImages($magentoPId);
-			$qty      =     !empty($stocks['qty']) ? $stocks['qty'] : 0;
-			$attrCodeValue = $product->getData('hiecor_product_id');
+		$attrCodeValue = $product->getData('hiecor_product_id');
+		$unlimited_stock = ($stocks['manage_stock'] == 1) ? 0 : 1;
+		$qty      =    (($stocks['manage_stock'] == 1) && !empty($stocks['qty'])) ? $stocks['qty'] : 0;
 
 
 			$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
@@ -75,7 +76,7 @@ class ProductSave implements ObserverInterface
 		                   "width"=>"0",
 		                   "height"=>"0",
 		                   "price_special"=>"0",
-		                   "unlimited_stock"=>'0',
+		                   "unlimited_stock"=>$unlimited_stock,
 		                   "taxable"=>"Yes",
 		                   "raw_product_cost"=>"",
 		                   "upc"=>"",
