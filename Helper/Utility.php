@@ -46,7 +46,7 @@ class Utility extends AbstractHelper
 		    'X-USERNAME: '.$configData['userName'],
 		    'X-AUTH-KEY: '.$configData['authKey'],
 		    'X-AGENT-ID: '.$configData['agentId']
-			),
+			)
 		);
 		$result = curl_exec($ch);
 		$response = json_decode($result,true);
